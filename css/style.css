@@ -3,60 +3,91 @@
   padding: 0;
   font-family: 'Barlow'; }
 
+body {
+  overflow: hidden; }
+
+.grey {
+  position: absolute;
+  background-color: #eef3f6;
+  border-radius: 0 0 0 55px;
+  z-index: -1;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  right: -30px; }
+
 .section {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr; }
+  .section span {
+    font-size: 20px;
+    color: #a0a1ac; }
 
 .PART1 {
   grid-column: 1/2;
-  grid-row: 1/2; }
-  .PART1 .but {
-    margin-top: 250px; }
-  .PART1 h3 {
-    font: weight 400;
-    font-size: 70px;
-    font-family: 'Barlow';
+  grid-row: 1/2;
+  margin-left: 100px;
+  margin-top: 250px; }
+  .PART1 h4 {
+    font-size: 80px;
     color: #242942; }
-  .PART1 .PART2 {
-    grid-column: 2/3;
-    grid-row: 1/2; }
-  .PART1 .buton1 {
+  .PART1 P {
+    font-size: 35px; }
+  .PART1__logo {
+    position: relative;
+    bottom: 140px; }
+  .PART1 .buton__1 {
     color: #ffffff;
     border-radius: 30px;
     width: 8%;
-    height: 20px;
+    height: 35px;
     background-color: #242942;
-    border: none; }
-  .PART1 .buton2 {
-    color: "#ffffff";
+    border: none;
+    margin-right: 25px; }
+  .PART1 .button__2 {
     border-radius: 10px;
     width: 30%;
     height: 45px;
     background-color: #ff5c5c;
-    border: none; }
+    border: none;
+    color: white;
+    margin-top: 30px;
+    margin-right: 30px; }
+
+.PART2 {
+  overflow: hidden;
+  grid-column: 2/3;
+  grid-row: 1/2; }
 
 .list {
   display: flex;
-  margin-left: 180px;
+  margin-left: 150px;
   margin-top: 100px;
-  background-color: #eef3f6;
-  width: 100%;
-  height: 100%; }
+  width: 50%;
+  height: 50%;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 600; }
   .list__1 a {
     color: #242942;
-    font-size: 30px;
-    margin-left: 40px;
-    list-style: none; }
+    font-size: 20px;
+    margin-left: 50px;
+    list-style: none;
+    text-decoration: none; }
   .list__1--listLogin {
     color: #a0a1ac;
-    margin-left: 30px;
     margin-bottom: 90px; }
     .list__1--listLogin a {
-      color: #a0a1ac; }
-  .list .img {
-    width: 30%; }
-    .list .img__1 {
-      position: relative;
-      left: 90px;
-      width: 30%; }
+      color: #a0a1ac;
+      font-weight: 600; }
+  .list__1--listPoint {
+    color: #a0a1ac;
+    position: relative;
+    left: 20px; }
+
+.img__1 {
+  width: 135%;
+  position: relative;
+  left: 3%;
+  top: 20px; }
