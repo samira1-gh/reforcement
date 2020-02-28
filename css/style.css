@@ -3,18 +3,15 @@
   padding: 0;
   font-family: 'Barlow'; }
 
-body {
-  overflow: hidden; }
-
 .grey {
   position: absolute;
   background-color: #eef3f6;
   border-radius: 0 0 0 55px;
   z-index: -1;
   width: 50%;
-  height: 50%;
+  height: 30%;
   top: 0;
-  right: -30px; }
+  right: 0px; }
 
 .section {
   display: grid;
@@ -30,7 +27,8 @@ body {
   margin-left: 100px;
   margin-top: 250px; }
   .PART1 h4 {
-    font-size: 80px;
+    width: 750px;
+    font-size: 68px;
     color: #242942; }
   .PART1 P {
     font-size: 35px; }

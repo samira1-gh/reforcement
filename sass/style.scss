@@ -1,13 +1,19 @@
+$mobile:375px;
+
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'Barlow';
-
 }
 
-body {
-    overflow: hidden;
-}
+
 
 
 .grey {
@@ -16,9 +22,9 @@ body {
     border-radius: 0 0 0 55px;
     z-index: -1;
     width: 50%;
-    height: 50%;
+    height: 30%;
     top: 0;
-    right: -30px;
+    right: 0px;
 }
 
 .section {
@@ -39,8 +45,8 @@ body {
     margin-top: 250px;
 
     h4 {
-
-        font-size: 80px;
+        width: 750px;
+        font-size: 68px;
         color: hsl(230, 29%, 20%);
     }
 
