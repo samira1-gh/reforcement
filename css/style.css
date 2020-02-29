@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Barlow'; }
+  font-family: "Barlow"; }
 
 .grey {
   position: absolute;
@@ -12,80 +12,153 @@
   height: 30%;
   top: 0;
   right: 0px; }
+  @media (max-width: 375px) {
+    .grey {
+      height: 50%; } }
+
+.menu {
+  margin: 10px; }
+  .menu .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .menu .navbar input[type=checkbox] {
+      display: none; }
+    .menu .navbar .dropdownclose {
+      visibility: hidden; }
+    .menu .navbar ul {
+      display: none;
+      z-index: 1;
+      width: 60vw;
+      margin-top: 10%;
+      padding: 3rem;
+      height: auto;
+      box-shadow: -2px 2px 8px #a0a1ac;
+      border-radius: 5px;
+      background-color: #fff;
+      position: absolute;
+      left: 5%; }
+      .menu .navbar ul li {
+        padding: 1rem; }
+        .menu .navbar ul li a {
+          color: #242942;
+          width: 100%;
+          text-align: center;
+          font-size: 24px;
+          text-align: center; }
+      @media (max-width: 375px) {
+        .menu .navbar ul .dropdownlist--grey {
+          display: none; } }
+      .menu .navbar ul .dropdownlist--bordertop {
+        border-top: 1px solid #a0a1ac;
+        margin-top: 2rem; }
+        .menu .navbar ul .dropdownlist--bordertop a {
+          color: #a0a1ac; }
+    .menu .navbar input[type=checkbox]:checked ~ ul {
+      display: block; }
+    .menu .navbar input[type=checkbox]:checked ~ .dropdowntoggle {
+      visibility: hidden; }
+    .menu .navbar input[type=checkbox]:checked ~ .dropdownclose {
+      visibility: visible;
+      margin-right: 30px; }
 
 .section {
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 1fr; }
+  grid-template-rows: 1fr;
+  margin-top: 3rem; }
   .section span {
-    font-size: 20px;
+    font-size: 16px;
     color: #a0a1ac; }
+  @media (max-width: 375px) {
+    .section {
+      display: flex;
+      flex-direction: column-reverse;
+      font-size: 18px; } }
 
 .PART1 {
   grid-column: 1/2;
   grid-row: 1/2;
   margin-left: 100px;
-  margin-top: 250px; }
+  margin-top: 200px; }
+  @media (max-width: 375px) {
+    .PART1 {
+      margin-left: 16px; } }
   .PART1 h4 {
     width: 750px;
     font-size: 68px;
-    color: #242942; }
+    color: #242942;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+    @media (max-width: 375px) {
+      .PART1 h4 {
+        font-size: 36px;
+        max-width: 100%;
+        font-weight: 800; } }
   .PART1 P {
     font-size: 35px; }
-  .PART1__logo {
-    position: relative;
-    bottom: 140px; }
   .PART1 .buton__1 {
     color: #ffffff;
     border-radius: 30px;
-    width: 8%;
-    height: 35px;
+    font-size: 20px;
     background-color: #242942;
     border: none;
-    margin-right: 25px; }
+    margin-right: 25px;
+    padding: 0px 10px; }
   .PART1 .button__2 {
     border-radius: 10px;
-    width: 30%;
-    height: 45px;
+    width: 20%;
+    height: 50px;
     background-color: #ff5c5c;
     border: none;
     color: white;
     margin-top: 30px;
-    margin-right: 30px; }
+    margin-right: 20px; }
+    @media (max-width: 375px) {
+      .PART1 .button__2 {
+        width: 40%;
+        height: 50px; } }
 
 .PART2 {
   overflow: hidden;
   grid-column: 2/3;
   grid-row: 1/2; }
 
-.list {
+.dropdownlist {
   display: flex;
-  margin-left: 150px;
-  margin-top: 100px;
-  width: 50%;
-  height: 50%;
-  list-style: none;
-  text-decoration: none;
-  font-weight: 600; }
-  .list__1 a {
+  list-style: none; }
+  .dropdownlist a {
+    color: #5b5f71;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 15rem; }
+    .dropdownlist a:hover {
+      text-decoration: underline; }
+    @media (max-width: 375px) {
+      .dropdownlist a {
+        margin-right: 0px;
+        margin-left: 3rem; } }
+  .dropdownlist__1 a {
     color: #242942;
     font-size: 20px;
     margin-left: 50px;
     list-style: none;
     text-decoration: none; }
-  .list__1--listLogin {
-    color: #a0a1ac;
-    margin-bottom: 90px; }
-    .list__1--listLogin a {
+  .dropdownlist__1--listLogin {
+    color: #a0a1ac; }
+    .dropdownlist__1--listLogin a {
       color: #a0a1ac;
       font-weight: 600; }
-  .list__1--listPoint {
+  .dropdownlist__1--listPoint {
     color: #a0a1ac;
     position: relative;
-    left: 20px; }
+    font-size: 8px;
+    left: 20px;
+    top: 10px; }
+
+@media (max-width: 375px) {
+  .img {
+    width: 100%; } }
 
 .img__1 {
-  width: 135%;
-  position: relative;
-  left: 3%;
-  top: 20px; }
+  width: 135%; }
