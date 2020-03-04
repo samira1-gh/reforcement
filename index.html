@@ -7,8 +7,10 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-
-
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800,900&display=swap" rel="stylesheet">
   <title>Project tracking intro component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -25,13 +27,47 @@
 </head>
 
 <body>
-  Product Features Pricing Login New Monograph Dashboard Powerful insights
-  into your team Project planning and time tracking for agile teams Schedule a
-  demo to see a live preview
 
-  <footer>
-    <p class="attribution">Coded by <a href="#">Your Name Here</a>.</p>
-  </footer>
+  <div class="grey"></div>
+  <div class="menu">
+    <div class="navbar">
+      <img class="logoImg" src="images/logo.svg" alt="icon">
+      <div class="dropdown">
+        <input type="checkbox" id="checkbox_toggle">
+        <label for="checkbox_toggle" class="dropdowntoggle"><img src="images/icon-hamburger.svg" alt="burger"></label>
+        <label for="checkbox_toggle" class="dropdownclose"><img src="images//icon-close.svg" alt="burger"></label>
+        <ul class="list">
+          <li><a href="#">PRODUCT</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li class="list--margin"><a href="#">PRICING</a></li>
+          <li class="list--grey"><a href="#">&#x2022</a></li>
+          <li class="list--bordertop"><a href="#">LOGIN</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="PART1">
+      <div class="grid">
+        <div class="buton">
+          <button class="buton__1">New</button><span>MONOGRAPH DASHBOARD</span>
+        </div>
+        <h4> POWERFUL INSIGHTS INFO YOUR TEAM </h4>
+        <p>project planning and time tracking </br> agile team</p>
+        <div class="button">
+          <button class="button__2"> SCHEDULE A DEMO</button><span>TO SEE A LIVE PREVIEW </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="PART2">
+
+      <div class="img">
+        <img class="img__1" src="images/illustration-devices.svg" alt="icon">
+      </div>
+
+    </div>
+  </div>
 </body>
 
 </html>
