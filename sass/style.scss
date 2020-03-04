@@ -1,18 +1,18 @@
-$mobile:375px;
+$mobile:1024px;
 
 
 @mixin mobile {
     @media (max-width: #{$mobile}) {
-        @content
+        @content;
     }
 }
+
 
 * {
     margin: 0;
     padding: 0;
     font-family: 'Barlow', ;
 }
-
 
 
 
@@ -38,6 +38,7 @@ $mobile:375px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: 2rem;
 
         input[type=checkbox] {
             display: none;
@@ -50,18 +51,23 @@ $mobile:375px;
         }
 
         ul {
-            display: none;
-            z-index: 1;
-            width: 60vw;
-            // margin-left: -65vw;
-            margin-top: 10%;
-            padding: 3rem;
-            height: auto;
-            box-shadow: -2px 2px 8px hsl(231, 7%, 65%);
-            border-radius: 5px;
-            background-color: #fff;
-            position: absolute;
-            left: 5%;
+            width: 48vw;
+
+            @include mobile() {
+                display: none;
+                z-index: 1;
+                width: 60vw;
+                margin-top: 10%;
+                padding: 3rem;
+                height: auto;
+                box-shadow: -2px 2px 8px hsl(231, 7%, 65%);
+                border-radius: 5px;
+                background-color: #fff;
+                position: absolute;
+                left: 5%;
+
+            }
+
 
             li {
                 padding: 1rem;
@@ -76,15 +82,18 @@ $mobile:375px;
 
             }
 
-            .dropdownlist--grey {
+            .list--grey {
                 @include mobile() {
                     display: none;
                 }
             }
 
-            .dropdownlist--bordertop {
-                border-top: 1px solid hsl(231, 7%, 65%);
-                margin-top: 2rem;
+            .list--bordertop {
+                @include mobile() {
+                    border-top: 1px solid hsl(231, 7%, 65%);
+                    margin-top: 2rem;
+
+                }
 
                 a {
                     color: hsl(231, 7%, 65%);
@@ -92,6 +101,17 @@ $mobile:375px;
                 }
             }
 
+        }
+
+        .dropdowntoggle {
+            display: none;
+
+            @include mobile() {
+                display: block;
+                margin-right: 30px;
+                margin-top: 20px;
+
+            }
         }
 
         input[type=checkbox]:checked~ul {
@@ -109,11 +129,14 @@ $mobile:375px;
     }
 }
 
+
 .section {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    padding-left: 3rem;
+
 
     span {
         font-size: 16px;
@@ -130,81 +153,81 @@ $mobile:375px;
 }
 
 
-.PART1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    margin-left: 100px;
-    margin-top: 200px;
+// .PART1 {
+//     grid-column: 1/2;
+//     grid-row: 1/2;
+//     margin-left: 100px;
+//     margin-top: 200px;
+
+//     @include mobile() {
+//         margin-left: 16px;
+//     }
+
+h4 {
+    width: 750px;
+    font-size: 68px;
+    color: hsl(230, 29%, 20%);
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     @include mobile() {
-        margin-left: 16px;
-    }
-
-    h4 {
-        width: 750px;
-        font-size: 68px;
-        color: hsl(230, 29%, 20%);
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        @include mobile() {
-            font-size: 36px;
-            max-width: 100%;
-            font-weight: 800;
-
-        }
+        font-size: 36px;
+        max-width: 100%;
+        font-weight: 800;
 
     }
 
-    P {
-        font-size: 35px;
+}
+
+P {
+    font-size: 35px;
 
 
-    }
+}
 
-    &__logo {
+// &__logo {
+//     @include mobile() {}
+// }
+
+.buton {
+    &__1 {
+        color: #ffffff;
+        border-radius: 30px;
+        font-size: 20px;
+        // // height: 35px;
+        background-color: hsl(230, 29%, 20%);
+        border: none;
+        margin-right: 25px;
+        padding: 0px 10px;
+
         @include mobile() {}
     }
 
-    .buton {
-        &__1 {
-            color: #ffffff;
-            border-radius: 30px;
-            font-size: 20px;
-            // // height: 35px;
-            background-color: hsl(230, 29%, 20%);
-            border: none;
-            margin-right: 25px;
-            padding: 0px 10px;
-
-            @include mobile() {}
-        }
 
 
+}
 
-    }
+.button {
 
-    .button {
+    &__2 {
+        border-radius: 10px;
+        width: 20%;
+        height: 50px;
+        background-color: hsl(0, 100%, 68%);
+        border: none;
+        color: rgb(255, 255, 255);
+        margin-top: 30px;
+        margin-right: 20px;
 
-        &__2 {
-            border-radius: 10px;
-            width: 20%;
+        @include mobile() {
+            width: 40%;
             height: 50px;
-            background-color: hsl(0, 100%, 68%);
-            border: none;
-            color: rgb(255, 255, 255);
-            margin-top: 30px;
-            margin-right: 20px;
-
-            @include mobile() {
-                width: 40%;
-                height: 50px;
-
-            }
 
         }
+
     }
 }
+
 
 .PART2 {
     overflow: hidden;
@@ -213,7 +236,8 @@ $mobile:375px;
 
 }
 
-.dropdownlist {
+.list {
+
     display: flex;
     list-style: none;
 
@@ -222,7 +246,7 @@ $mobile:375px;
         color: hsl(230, 11%, 40%);
         text-decoration: none;
         font-weight: 600;
-        margin-right: 15rem;
+        margin-right: 1em;
 
         &:hover {
             text-decoration: underline;
@@ -284,5 +308,12 @@ $mobile:375px;
     &__1 {
         width: 135%;
 
+    }
+}
+
+.grid {
+    @include mobile() {
+        margin-left: 10px;
+        margin-top: 80px;
     }
 }
